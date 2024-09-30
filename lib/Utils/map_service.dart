@@ -24,15 +24,13 @@ class MapService {
   static MapService? _instance;
 
   static MapService? get instance {
-    if (_instance == null) {
-      _instance = MapService._();
-    }
+    _instance ??= MapService._();
     return _instance;
   }
 
   final String baseUrl = "https://maps.googleapis.com/maps/api/directions/json";
 
-  Duration duration = Duration();
+  Duration duration = const Duration();
 
   ValueNotifier<LatLng?>? currentPosition = ValueNotifier<LatLng?>(null);
   ValueNotifier<Set<Marker>> markers = ValueNotifier<Set<Marker>>({});
@@ -143,7 +141,7 @@ Future<bool> requestAndCheckPermission() async {
       final DateTime time = DateTime.fromMillisecondsSinceEpoch(values['routes'][0]['legs'][0]['duration']['value']);
       duration = DateTime.now().difference(time);
     }
-    final name = await getAddressFromCoordinate(LatLng(endLatLng!.latitude, endLatLng!.longitude));
+    final name = await getAddressFromCoordinate(LatLng(endLatLng!.latitude, endLatLng.longitude));
     final polylines = PolylinePoints().decodePolyline(points);
     final Uint8List markerIcon = await getBytesFromAsset(ImagesModel.circlePin, 50);
     final icon = BitmapDescriptor.fromBytes(markerIcon);
@@ -156,9 +154,9 @@ Future<bool> requestAndCheckPermission() async {
     final check = await requestAndCheckPermission();
     if (check) {
       Stream<Position> position = Geolocator.getPositionStream(
-        locationSettings: LocationSettings(
+        locationSettings: const LocationSettings(
           accuracy: LocationAccuracy.high,
-          timeLimit: const Duration(seconds: 10),
+          timeLimit: Duration(seconds: 10),
         ));
     position.listen((position){
       try{

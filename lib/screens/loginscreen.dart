@@ -9,6 +9,8 @@ import 'package:jutcapp/driver/driverlogin.dart'; // Driver login screen
 import 'package:shared_preferences/shared_preferences.dart'; // Shared preferences for storing user details
 
 class Loginscreen extends StatefulWidget {
+  const Loginscreen({super.key});
+
   @override
   _LoginscreenState createState() => _LoginscreenState(); // Stateful widget for login screen
 }
@@ -55,7 +57,7 @@ class _LoginscreenState extends State<Loginscreen> {
           if (userName != null && userEmail != null) {
             Navigator.pushAndRemoveUntil( // Navigate to main screen on successful login
               context,
-              MaterialPageRoute(builder: (context) => Navigationmenu()),
+              MaterialPageRoute(builder: (context) => const Navigationmenu()),
               (route) => false,
             );
           } else {
@@ -140,7 +142,7 @@ class _LoginscreenState extends State<Loginscreen> {
                         inputFormatters: [
                           LengthLimitingTextInputFormatter(100), // Limit email length
                         ],
-                        style: TextStyle(color: Colors.black), // Text color
+                        style: const TextStyle(color: Colors.black), // Text color
                         decoration: const InputDecoration( // Input decoration
                           hintText: "Email", // Placeholder text
                           hintStyle: TextStyle( // Placeholder style
@@ -185,7 +187,7 @@ class _LoginscreenState extends State<Loginscreen> {
                         inputFormatters: [
                           LengthLimitingTextInputFormatter(50), // Limit password length
                         ],
-                        style: TextStyle(color: Colors.black), // Text color
+                        style: const TextStyle(color: Colors.black), // Text color
                         decoration: InputDecoration( // Input decoration
                           hintText: "Password", // Placeholder text
                           hintStyle: const TextStyle( // Placeholder style
@@ -282,7 +284,7 @@ class _LoginscreenState extends State<Loginscreen> {
                         onTap: () {
                           Navigator.push(context, MaterialPageRoute(builder: (context) => Driverlogin())); // Navigate to driver login screen
                         },
-                        child: Text(
+                        child: const Text(
                           'Login as driver', // Text for driver login link
                           style: TextStyle(
                             fontSize: 16, // Text size

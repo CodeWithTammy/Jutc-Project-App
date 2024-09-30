@@ -142,7 +142,7 @@ class _UserhomepageState extends State<Userhomepage> {
                 borderRadius: BorderRadius.circular(25.0),
                 color: Colors.white,
                 child: TextField(
-                  style: TextStyle(color: Colors.black),
+                  style: const TextStyle(color: Colors.black),
                   onChanged: (value) {
                     setState(() {
                       searchQuery = value.toLowerCase(); // Update search query state

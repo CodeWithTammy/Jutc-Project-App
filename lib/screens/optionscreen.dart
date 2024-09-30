@@ -23,7 +23,7 @@ class _OptionscreenState extends State<Optionscreen> {
           child: Center(
             child: Column(
               children: <Widget>[
-                Container(
+                SizedBox(
                   width: 200,
                   height: 200,
                   child: Image.asset('assets/logo.png'), // Displays app logo
@@ -32,7 +32,7 @@ class _OptionscreenState extends State<Optionscreen> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 300,
                       height: 50,
                       child: ElevatedButton(
@@ -44,6 +44,12 @@ class _OptionscreenState extends State<Optionscreen> {
                             ),
                           );
                         },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          backgroundColor: const Color.fromARGB(255, 255, 234, 0), // Button background color
+                        ),
                         child: const Text(
                           'Sign Up',
                           style: TextStyle(
@@ -52,16 +58,10 @@ class _OptionscreenState extends State<Optionscreen> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          backgroundColor: const Color.fromARGB(255, 255, 234, 0), // Button background color
-                        ),
                       ),
                     ),
                     const SizedBox(height: 20), // Spacer for separation
-                    Container(
+                    SizedBox(
                       width: 300,
                       height: 50,
                       child: ElevatedButton(
@@ -73,14 +73,6 @@ class _OptionscreenState extends State<Optionscreen> {
                             ),
                           );
                         },
-                        child: const Text(
-                          'Login',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30),
@@ -90,6 +82,14 @@ class _OptionscreenState extends State<Optionscreen> {
                             ),
                           ),
                           backgroundColor: Colors.white, // Button background color
+                        ),
+                        child: const Text(
+                          'Login',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),

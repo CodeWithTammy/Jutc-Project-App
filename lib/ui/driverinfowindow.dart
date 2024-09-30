@@ -39,7 +39,7 @@ class CustomInfoWindow extends StatefulWidget {
   /// Width of [CustomInfoWindow].
   final double width;
 
-  const CustomInfoWindow({
+  const CustomInfoWindow({super.key, 
     required this.controller,
     this.offset = 50,
     this.height = 50,
@@ -112,10 +112,10 @@ class _CustomInfoWindowState extends State<CustomInfoWindow> {
         visible: (_showNow == false || (_leftMargin == 0 && _topMargin == 0) || _child == null || _latLng == null)
             ? false
             : true,
-        child: Container(
-          child: _child,
+        child: SizedBox(
           height: widget.height,
           width: widget.width,
+          child: _child,
         ),
       ),
     );

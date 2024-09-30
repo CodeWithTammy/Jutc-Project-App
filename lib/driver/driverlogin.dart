@@ -7,6 +7,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
 
 class Driverlogin extends StatefulWidget {
+  const Driverlogin({super.key});
+
   @override
   _DriverloginState createState() => _DriverloginState();
 }
@@ -114,7 +116,7 @@ class _DriverloginState extends State<Driverlogin> {
                           ),
                         ),
                       ),
-                      Text(
+                      const Text(
                         'Please sign in to continue.',
                         style: TextStyle(
                             fontSize: 17,
@@ -209,10 +211,10 @@ class _DriverloginState extends State<Driverlogin> {
                       const SizedBox(height: 10),
                       const SizedBox(height: 40),
                       _loggingIn // Conditionally show the circular progress indicator
-                          ? CircularProgressIndicator()
+                          ? const CircularProgressIndicator()
                           : GestureDetector(
                               onTap: login,
-                              child: Container(
+                              child: SizedBox(
                                 width: 250,
                                 height: 50,
                                 child: ElevatedButton(
@@ -231,7 +233,7 @@ class _DriverloginState extends State<Driverlogin> {
                                 ),
                               ),
                             ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       GestureDetector(
@@ -239,10 +241,10 @@ class _DriverloginState extends State<Driverlogin> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => Navigationmenu()),
+                                builder: (context) => const Navigationmenu()),
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           'Login as user',
                           style: TextStyle(
                             fontSize: 16,

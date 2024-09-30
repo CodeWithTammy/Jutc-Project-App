@@ -43,7 +43,7 @@ class Home extends StatelessWidget {
       home: AnimatedSplashScreen(
         splash: 'assets/logo.png', // Splash screen image asset
         splashTransition: SplashTransition.fadeTransition, // Splash screen transition animation
-        nextScreen: OnboardingPage(), // Next screen after splash screen
+        nextScreen: const OnboardingPage(), // Next screen after splash screen
       ),
       debugShowCheckedModeBanner: false, // Disable debug banner
     );

@@ -25,11 +25,11 @@ class _UsermapState extends State<Usermap> {
   final Set<Polyline> _polylines = {}; // Set to store map polylines
   final List<LatLng> _routePoints = []; // List to store route points
   final Set<Marker> _markers = {}; // Set to store map markers
-  bool _isOnline = false; // Flag to check if the user is online
+  final bool _isOnline = false; // Flag to check if the user is online
   late StreamSubscription<Position> _positionStream; // Stream subscription for position updates
-  TextEditingController _destinationController = TextEditingController(); // Controller for destination input
-  List<dynamic> _searchResults = []; // List to store search results
-  String _sessionToken = const Uuid().v4(); // Unique session token for API requests
+  final TextEditingController _destinationController = TextEditingController(); // Controller for destination input
+  final List<dynamic> _searchResults = []; // List to store search results
+  final String _sessionToken = const Uuid().v4(); // Unique session token for API requests
 
   @override
   void initState() {
@@ -129,7 +129,7 @@ class _UsermapState extends State<Usermap> {
       ),
       body: Column(
         children: [
-          Container(
+          SizedBox(
             height: 300,
             child: Expanded(
               child: GoogleMap(

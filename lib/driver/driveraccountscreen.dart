@@ -178,16 +178,16 @@ class _DriveraccountscreenState extends State<Driveraccountscreen> {
                           const Optionscreen()),  // Navigate to options screen
                 );
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 255, 221, 0),
+                foregroundColor: Colors.black,
+                elevation: 10,
+              ),
               child: Container(
                 width: screenWidth * 0.5,
                 child: const Center(
                   child: Text('Logout'),
                 ),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 255, 221, 0),
-                foregroundColor: Colors.black,
-                elevation: 10,
               ),
             ),
             const SizedBox(height: 20),

@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:jutcapp/model/drivermodel.dart';
 
 class CustomWindow extends StatelessWidget {
-  const CustomWindow({Key? key, required this.info}) : super(key: key);
+  const CustomWindow({super.key, required this.info});
   final Drivermodel info;
 
   @override
@@ -36,8 +36,8 @@ class CustomWindow extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text('${(info.time!.inMinutes) % 60}',
-                                style: TextStyle(color: Colors.black)),
-                            Text('min',
+                                style: const TextStyle(color: Colors.black)),
+                            const Text('min',
                                 style:TextStyle(color: Colors.black)),
                           ],
                         ),
@@ -46,9 +46,9 @@ class CustomWindow extends StatelessWidget {
                   
                         child: Text(
                       '${info.name}',
-                      style:TextStyle(color: Colors.black),
+                      style:const TextStyle(color: Colors.black),
                     )).paddingAll(8),
-                    Icon(Icons.arrow_forward_ios, size: 16, color: Colors.black),
+                    const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.black),
                     const SizedBox(width: 4),
                   ],
                 ),

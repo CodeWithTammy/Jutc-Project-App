@@ -116,7 +116,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
             } else {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Optionscreen()), // Navigate to Optionscreen
+                MaterialPageRoute(builder: (context) => const Optionscreen()), // Navigate to Optionscreen
               );
             }
           });

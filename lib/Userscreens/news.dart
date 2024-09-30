@@ -5,7 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 // Define a StatefulWidget named News
 class News extends StatefulWidget {
-  const News({Key? key}) : super(key: key);
+  const News({super.key});
 
   @override
   State<News> createState() => _NewsState();
@@ -137,7 +137,7 @@ class _NewsState extends State<News> {
                                   // Launch the URL of the news article
                                   launchUrl(Uri.parse(documentSnapshot['url']));
                                 },
-                                child: Container(
+                                child: SizedBox(
                                   height: 430,
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -156,7 +156,7 @@ class _NewsState extends State<News> {
                                         ),
                                       ),
                                       const SizedBox(height: 10),
-                                      Container(
+                                      SizedBox(
                                         width: 350,
                                         child: Column(
                                           children: [

@@ -6,7 +6,7 @@ import 'package:jutcapp/Userscreens/add_card.dart';
 import 'package:jutcapp/Utils/auth_controller.dart';
 
 class Topup extends StatefulWidget {
-  const Topup({Key? key}) : super(key: key);
+  const Topup({super.key});
 
   @override
   State<Topup> createState() => _TopupState();
@@ -128,7 +128,7 @@ class _TopupState extends State<Topup> {
                     );
                   }),
                   const SizedBox(height: 20),
-                  Container(
+                  SizedBox(
                     width: 500,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
@@ -312,7 +312,7 @@ class _TopupState extends State<Topup> {
               ),
             ),
             const SizedBox(height: 20),
-            Container(
+            SizedBox(
               width: 350,
               child: ElevatedButton(
                 onPressed: showTopUpBottomSheet,
@@ -438,9 +438,9 @@ class _TopupState extends State<Topup> {
                         (route) => false,
                       );
                     },
-                    child: const Icon(CupertinoIcons.arrow_right, color: Colors.black),
                     backgroundColor: const Color.fromARGB(255, 255, 225, 0),
                     shape: const CircleBorder(),
+                    child: const Icon(CupertinoIcons.arrow_right, color: Colors.black),
                   ),
                 ],
               ),

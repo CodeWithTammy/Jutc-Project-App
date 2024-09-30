@@ -13,7 +13,7 @@ class Navdrawer extends StatelessWidget {
   final NavigationController controller;
 
   // Constructor with a required controller parameter.
-  const Navdrawer({Key? key, required this.controller}) : super(key: key);
+  const Navdrawer({super.key, required this.controller});
 
   // Function to handle user sign out.
   Future<void> _signOut(BuildContext context) async {
@@ -33,7 +33,7 @@ class Navdrawer extends StatelessWidget {
       await Future.delayed(const Duration(seconds: 2));
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Optionscreen()), 
+        MaterialPageRoute(builder: (context) => const Optionscreen()), 
       );
     } catch (e) {
       // Print error message if sign out fails.
@@ -67,11 +67,11 @@ class Navdrawer extends StatelessWidget {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 // Show loading state in the UserAccountsDrawerHeader.
                 return UserAccountsDrawerHeader(
-                  accountName: Text(
+                  accountName: const Text(
                     'Loading...',
                     style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
                   ),
-                  accountEmail: Text(
+                  accountEmail: const Text(
                     'Loading...',
                     style: TextStyle(color: Colors.black),
                   ),
@@ -80,18 +80,18 @@ class Navdrawer extends StatelessWidget {
                       child: Image.asset('assets/pfpholder.jpg'),
                     ),
                   ),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color.fromARGB(255, 255, 225, 0),
                   ),
                 );
               } else if (snapshot.hasError) {
                 // Show error state in the UserAccountsDrawerHeader.
                 return UserAccountsDrawerHeader(
-                  accountName: Text(
+                  accountName: const Text(
                     'Error',
                     style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
                   ),
-                  accountEmail: Text(
+                  accountEmail: const Text(
                     'Error',
                     style: TextStyle(color: Colors.black),
                   ),
@@ -100,7 +100,7 @@ class Navdrawer extends StatelessWidget {
                       child: Image.asset('assets/pfpholder.jpg'),
                     ),
                   ),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color.fromARGB(255, 255, 225, 0),
                   ),
                 );
@@ -128,11 +128,11 @@ class Navdrawer extends StatelessWidget {
               } else {
                 // Show default state if no user data is found.
                 return UserAccountsDrawerHeader(
-                  accountName: Text(
+                  accountName: const Text(
                     'No User',
                     style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
                   ),
-                  accountEmail: Text(
+                  accountEmail: const Text(
                     'No Email',
                     style: TextStyle(color: Colors.black),
                   ),
@@ -141,7 +141,7 @@ class Navdrawer extends StatelessWidget {
                       child: Image.asset('assets/pfpholder.jpg'),
                     ),
                   ),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color.fromARGB(255, 255, 225, 0),
                   ),
                 );

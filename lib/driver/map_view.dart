@@ -16,7 +16,7 @@ import '../Utils/drivernavmenu.dart';
 
 // Stateful widget for the DriverMapScreen
 class DriverMapScreen extends StatefulWidget {
-  const DriverMapScreen({Key? key}) : super(key: key);
+  const DriverMapScreen({super.key});
 
   @override
   _DriverMapScreenState createState() => _DriverMapScreenState();
@@ -31,9 +31,9 @@ class _DriverMapScreenState extends State<DriverMapScreen> {
   final Set<Marker> _markers = {};
   bool _isOnline = false;
   late StreamSubscription<Position> _positionStream;
-  TextEditingController _destinationController = TextEditingController();
+  final TextEditingController _destinationController = TextEditingController();
   List<dynamic> _searchResults = [];
-  String _sessionToken = const Uuid().v4();
+  final String _sessionToken = const Uuid().v4();
 
   @override
   void initState() {

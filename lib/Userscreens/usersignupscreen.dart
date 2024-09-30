@@ -11,6 +11,8 @@ import 'package:shared_preferences/shared_preferences.dart'; // Shared preferenc
 
 // Signupscreen StatefulWidget class definition
 class Signupscreen extends StatefulWidget {
+  const Signupscreen({super.key});
+
   @override
   _SignupscreenState createState() => _SignupscreenState(); // Creates state for Signupscreen
 }
@@ -163,7 +165,7 @@ class _SignupscreenState extends State<Signupscreen> {
                         inputFormatters: [
                           LengthLimitingTextInputFormatter(50), // Limit input length
                         ],
-                        style: TextStyle(color: Colors.black), // Text color
+                        style: const TextStyle(color: Colors.black), // Text color
                         decoration: const InputDecoration(
                           hintText: "Name", // Placeholder text
                           hintStyle: TextStyle(
@@ -207,7 +209,7 @@ class _SignupscreenState extends State<Signupscreen> {
                         inputFormatters: [
                           LengthLimitingTextInputFormatter(100), // Limit input length
                         ],
-                        style: TextStyle(color: Colors.black), // Text color
+                        style: const TextStyle(color: Colors.black), // Text color
                         decoration: const InputDecoration(
                           hintText: "Email", // Placeholder text
                           hintStyle: TextStyle(
@@ -255,7 +257,7 @@ class _SignupscreenState extends State<Signupscreen> {
                         inputFormatters: [
                           LengthLimitingTextInputFormatter(50), // Limit input length
                         ],
-                        style: TextStyle(color: Colors.black), // Text color
+                        style: const TextStyle(color: Colors.black), // Text color
                         decoration: InputDecoration(
                           hintText: "Password", // Placeholder text
                           hintStyle: const TextStyle(
@@ -313,7 +315,7 @@ class _SignupscreenState extends State<Signupscreen> {
                         inputFormatters: [
                           LengthLimitingTextInputFormatter(50), // Limit input length
                         ],
-                        style: TextStyle(color: Colors.black), // Text color
+                        style: const TextStyle(color: Colors.black), // Text color
                         decoration: InputDecoration(
                           hintText: "Confirm Password", // Placeholder text
                           hintStyle: const TextStyle(

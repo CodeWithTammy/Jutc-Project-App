@@ -11,7 +11,7 @@ class DriverDrawer extends StatelessWidget {
   final DriverNavigationController controller;
 
   // Constructor to initialize the DriverDrawer with a controller
-  const DriverDrawer({Key? key, required this.controller}) : super(key: key);
+  const DriverDrawer({super.key, required this.controller});
 
   // Function to sign out the user
   Future<void> _signOut(BuildContext context) async {
@@ -27,7 +27,7 @@ class DriverDrawer extends StatelessWidget {
       await Future.delayed(const Duration(seconds: 2));
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Optionscreen()), // Navigate to the options screen
+        MaterialPageRoute(builder: (context) => const Optionscreen()), // Navigate to the options screen
       );
     } catch (e) {
       print("Error signing out: $e"); // Print error message if sign out fails
@@ -43,13 +43,13 @@ class DriverDrawer extends StatelessWidget {
         children: [
           // UserAccountsDrawerHeader to display user's account information
           UserAccountsDrawerHeader(
-            accountName: Text(
+            accountName: const Text(
               'Driver Id: 20205621',
-              style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+              style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
             ),
-            accountEmail: Text(
+            accountEmail: const Text(
               'Route: 17A',
-              style: const TextStyle(color: Colors.black),
+              style: TextStyle(color: Colors.black),
             ),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
@@ -111,7 +111,7 @@ class DriverDrawer extends StatelessWidget {
             ),
             onTap: () => Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => Optionscreen()), // Navigate to the options screen
+              MaterialPageRoute(builder: (context) => const Optionscreen()), // Navigate to the options screen
             ),
           ),
         ],

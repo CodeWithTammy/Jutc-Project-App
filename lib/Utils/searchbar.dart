@@ -5,10 +5,10 @@ class SearchBarWidget extends StatelessWidget {
   final Function(String) onChanged;
 
   const SearchBarWidget({
-    Key? key,
+    super.key,
     required this.searchController,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class SearchBarWidget extends StatelessWidget {
       child: TextField(
         controller: searchController,
         onChanged: onChanged,
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           labelText: "Search",
           hintText: "Search by route..",
           prefixIcon: Icon(Icons.search),

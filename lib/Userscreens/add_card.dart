@@ -172,7 +172,7 @@ class _AddmypaymentState extends State<Addmypayment> {
                     ),
                     const SizedBox(height: 20),
                     const SizedBox(height: 20),
-                    Container(
+                    SizedBox(
                       width: 300,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -203,7 +203,7 @@ class _AddmypaymentState extends State<Addmypayment> {
                                 cvvCode, 
                                 cardHolderName
                               );
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => Navigationmenu())); // Navigate to menu screen
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => const Navigationmenu())); // Navigate to menu screen
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(content: Text("Card was successfully added")), // Show success message
                               );

@@ -6,7 +6,7 @@ import 'package:cloud_firestore/cloud_firestore.dart'; // Importing Firestore pa
 
 // StatefulWidget to manage the state of the UserMapScreen
 class UserMapScreen extends StatefulWidget {
-  const UserMapScreen({Key? key}) : super(key: key);
+  const UserMapScreen({super.key});
 
   @override
   _UserMapScreenState createState() => _UserMapScreenState();
@@ -26,7 +26,7 @@ class _UserMapScreenState extends State<UserMapScreen> {
   // Function to listen to real-time updates from Firestore for driver locations
   void _listenToDriverUpdates() {
     FirebaseFirestore.instance.collection('drivers').snapshots().listen((snapshot) {
-      snapshot.docs.forEach((doc) {
+      for (var doc in snapshot.docs) {
         GeoPoint geoPoint = doc['location']; // Getting driver's location
         LatLng driverPosition = LatLng(geoPoint.latitude, geoPoint.longitude); // Converting to LatLng
         bool isOnline = doc['isOnline']; // Checking if the driver is online
@@ -39,19 +39,19 @@ class _UserMapScreenState extends State<UserMapScreen> {
             _markers.removeWhere((marker) => marker.markerId.value == doc.id);
           }
         });
-      });
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('User Map')), // AppBar with title
+      appBar: AppBar(title: const Text('User Map')), // AppBar with title
       body: GoogleMap(
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller); // Completing the controller when map is created
         },
-        initialCameraPosition: CameraPosition(target: LatLng(0, 0), zoom: 10), // Initial camera position
+        initialCameraPosition: const CameraPosition(target: LatLng(0, 0), zoom: 10), // Initial camera position
         markers: _markers, // Markers to be displayed on the map
       ),
     );

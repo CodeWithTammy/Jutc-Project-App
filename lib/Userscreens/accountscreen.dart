@@ -5,7 +5,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:jutcapp/screens/optionscreen.dart';
 
 class Accountscreen extends StatefulWidget {
-  const Accountscreen({Key? key}) : super(key: key);
+  const Accountscreen({super.key});
 
   @override
   State<Accountscreen> createState() => _AccountscreenState();
@@ -40,7 +40,7 @@ class _AccountscreenState extends State<Accountscreen> {
     try {
       await FirebaseAuth.instance.signOut();
        ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
+        const SnackBar(
           content: Text('Successfully logged out'),
           duration: Duration(seconds: 2),
         ),
@@ -48,7 +48,7 @@ class _AccountscreenState extends State<Accountscreen> {
       // Navigate to your login screen after logout
      Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Optionscreen()), // Direct reference to the options screen
+        MaterialPageRoute(builder: (context) => const Optionscreen()), // Direct reference to the options screen
       );
     } catch (e) {
       print("Error signing out: $e");
@@ -216,17 +216,17 @@ class _AccountscreenState extends State<Accountscreen> {
             ),
             const SizedBox(height: 50),
             ElevatedButton(
-              onPressed: _signOut, // Call _signOut function to logout
+              onPressed: _signOut,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 255, 221, 0),
+                foregroundColor: Colors.black,
+                elevation: 10,
+              ), // Call _signOut function to logout
               child: Container(
                 width: screenWidth * 0.5,
                 child: const Center(
                   child: Text('Logout'),
                 ),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 255, 221, 0),
-                foregroundColor: Colors.black,
-                elevation: 10,
               ),
             ),
             const SizedBox(height: 50),
