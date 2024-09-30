@@ -1,0 +1,105 @@
+[
+    {
+      "id": 0,
+      "routename": "17A",
+      "depart": "Depart: Portmore",
+      "to": "To: Half-way-tree",
+      "text": "Go to"
+    },
+    {
+        "id": 1,
+        "routename": "18A",
+        "depart": "Depart: Portmore",
+        "to": "To: Half-way-tree",
+        "text": "Go to"
+      },
+      {
+        "id": 2,
+        "routename": "20A",
+        "depart": "Depart: Portmore",
+        "to": "To: Half-way-tree",
+        "text": "Go to"
+      },
+      {
+        "id": 3,
+        "routename": "1A",
+        "depart": "Depart: Hellshire",
+        "to": "To: Half-way-tree",
+        "text": "Go to"
+      },
+      {
+        "id": 4,
+        "routename": "17",
+        "depart": "Depart: Portmore",
+        "to": "To: Downtown",
+        "text": "Go to"
+      },
+      {
+        "id": 5,
+        "routename": "18",
+        "depart": "Depart: Portmore",
+        "to": "To: Downtown",
+        "text": "Go to"
+      },
+      {
+        "id": 6,
+        "routename": "20",
+        "depart": "Depart: Portmore",
+        "to": "To: Downtown",
+        "text": "Go to"
+      },
+      {
+        "id": 7,
+        "routename": "19Ax",
+        "depart": "Depart: Portmore",
+        "to": "To: Papine",
+        "text": "Go to"
+      },
+      {
+        "id": 8,
+        "routename": "19Bx",
+        "depart": "Depart: Portmore",
+        "to": "To: Papine",
+        "text": "Go to"
+      },
+      {
+        "id": 9,
+        "routename": "16A",
+        "depart": "Depart: Portmore",
+        "to": "To: Half-way-tree",
+        "text": "Go to"
+      },
+      {
+        "id": 10,
+        "routename": "16",
+        "depart": "Depart: Portmore",
+        "to": "To: Cross-Roads",
+        "text": "Go to"
+      },
+      {
+        "id": 11,
+        "routename": "4",
+        "depart": "Depart: Portmore",
+        "to": "To: Cross-Roads",
+        "text": "Go to"
+      },
+      {
+        "id": 12,
+        "routename": "301",
+        "depart": "Depart: Hellshire",
+        "to": "To: Cross-Roads",
+        "text": "Go to"
+      },
+      {
+        "id": 13,
+        "routename": "1",
+        "depart": "Depart: Hellshire",
+        "to": "To: Downtown",
+        "text": "Go to"
+      }
+      
+
+      
+    
+  ]
+  

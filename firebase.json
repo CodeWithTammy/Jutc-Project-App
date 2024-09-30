@@ -1,0 +1,23 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "jutcapp",
+                    "appId": "1:315254596570:android:817fe985b3ec2bf5da16e3",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "jutcapp",
+                    "configurations": {
+                        "android": "1:315254596570:android:817fe985b3ec2bf5da16e3",
+                        "ios": "1:315254596570:ios:737a6115012077dcda16e3",
+                        "web": "1:315254596570:web:cfa4353cc16e4d59da16e3"
+                    }
+                }
+            }
+        }
+    }
+}

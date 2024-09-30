@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "315254596570",
+    "project_id": "jutcapp",
+    "storage_bucket": "jutcapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315254596570:android:817fe985b3ec2bf5da16e3",
+        "android_client_info": {
+          "package_name": "com.example.jutcapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfk3xdSqeXlEALnsB-z2HdQojg4r7TD9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
