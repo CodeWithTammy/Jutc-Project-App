@@ -7,11 +7,7 @@ This repository contains the source code for a **JUTC App** mockup, developed as
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [Technologies](#technologies)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 - **Bus Schedules:** Check real-time bus schedules and plan trips.
