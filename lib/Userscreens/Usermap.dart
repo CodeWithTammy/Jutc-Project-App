@@ -100,7 +100,7 @@ class _UsermapState extends State<Usermap> {
   // Function to get the latitude and longitude of a place using its place ID
   Future<LatLng> _getPlaceLatLng(String placeId) async {
     String baseURL = 'https://maps.googleapis.com/maps/api/place/details/json';
-    String request = '$baseURL?place_id=$placeId&key=AIzaSyAZ4k9vLh1JWaeXurvmJjLs4E1-sF-_Tl';
+    String request = '$baseURL?place_id=$placeId&key=APIKEY';
     http.Response response = await http.get(Uri.parse(request));
     if (response.statusCode == 200) {
       var location = jsonDecode(response.body)['result']['geometry']['location'];
